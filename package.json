@@ -1,0 +1,36 @@
+{
+	"name": "package_for_lesson3",
+	"version": "1.0.0",
+	"description": "test_package_for_lesson3",
+	"main": "test_value",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"runTests": "node lesson3/task1.js",
+		"prepare": "husky",
+		"eslint:all": "npx eslint .",
+		"prettier:all": "npx prettier --check ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PavloPolovynkin/lesson3.git"
+	},
+	"keywords": [
+		"lesson3"
+	],
+	"author": "PavloPolovynkin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PavloPolovynkin/lesson3/issues"
+	},
+	"homepage": "https://github.com/PavloPolovynkin/lesson3#readme",
+	"dependencies": {
+		"chalk": "^5.4.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.25.1",
+		"eslint": "^9.25.1",
+		"globals": "^16.0.0",
+		"prettier": "3.5.3"
+	}
+}
