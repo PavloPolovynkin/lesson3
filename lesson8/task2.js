@@ -16,8 +16,8 @@
 ////v3
 const numbers = [1, 2, 3, 4, 5];
 const modifiedNumbers = numbers.map((num, index) => {
-    if (numbers.length) {
-        return num * index;
-    }
+	if (numbers.length) {
+		return num * index;
+	}
 });
-console.log(modifiedNumbers)
+console.log(modifiedNumbers);

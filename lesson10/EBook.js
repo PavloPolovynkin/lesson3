@@ -1,31 +1,33 @@
-import { Book } from "./Book.js";
+import { Book } from './Book.js';
 export class EBook extends Book {
-    constructor(title, author, year, fileType) {
-        super(title, author, year);
-        this.fileType = fileType;
-    }
+	constructor(title, author, year, fileType) {
+		super(title, author, year);
+		this.fileType = fileType;
+	}
 
-    printInfo() {
-        console.log(`Book: ${this.title}, author: ${this.author}, year of publication: ${this.year}, file type: ${this.fileType}`)
-    }
+	printInfo() {
+		console.log(
+			`Book: ${this.title}, author: ${this.author}, year of publication: ${this.year}, file type: ${this.fileType}`,
+		);
+	}
 
-    get fileType () {
-        return this._fileType;
-    }
+	get fileType() {
+		return this._fileType;
+	}
 
-    set fileType(fileTypeUnderTest) {
-        if (typeof fileTypeUnderTest !== 'string') {
-            console.log(`----${typeof fileTypeUnderTest.fileType}`)
-            console.log(`Error, please enter text for 'fileType'`);
-            return;
-        }
-        this._fileType = fileTypeUnderTest; 
-    }
+	set fileType(fileTypeUnderTest) {
+		if (typeof fileTypeUnderTest !== 'string') {
+			console.log(`----${typeof fileTypeUnderTest.fileType}`);
+			console.log(`Error, please enter text for 'fileType'`);
+			return;
+		}
+		this._fileType = fileTypeUnderTest;
+	}
 
-    //
-    static someTypeOfBook(someBook, addFileType) {
-        return new EBook(someBook.title, someBook.author, someBook.year, addFileType);
-    }
+	//
+	static someTypeOfBook(someBook, addFileType) {
+		return new EBook(someBook.title, someBook.author, someBook.year, addFileType);
+	}
 }
 ///
 //  const ebook1 = new EBook('Lovecraft', 'The call of Cthulhu' , 1976, 'txt');

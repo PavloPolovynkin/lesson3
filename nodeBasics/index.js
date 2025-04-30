@@ -5,4 +5,4 @@ import chalk from 'chalk';
 let user = 'Till';
 let hello_text = `Hi ${user}`;
 
-console.log(chalk.red(hello_text +" :)"));
+console.log(chalk.red(hello_text + ' :)'));

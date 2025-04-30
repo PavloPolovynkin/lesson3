@@ -1,57 +1,56 @@
 export class Book {
-    constructor(author, title, year) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-    }
+	constructor(author, title, year) {
+		this.title = title;
+		this.author = author;
+		this.year = year;
+	}
 
-    //some static method for sorting years of list books
-    static oldest(books) {
-        if (!books.length) {
-            console.log("Error: Массив пустой");
-            return null;
-        }
-    
-        let oldest = books[0];
-    
-        for (let book of books) {
-            if (Number(book.year) < Number(oldest.year)) {
-                oldest = book;
-            }
-        }
-    
-        return oldest.title;
-    }
-    
+	//some static method for sorting years of list books
+	static oldest(books) {
+		if (!books.length) {
+			console.log('Error: Массив пустой');
+			return null;
+		}
 
-    get book() {
-        return{
-            title: this.title, 
-            author: this.author,
-            year: this.year
-        };
-    }
+		let oldest = books[0];
 
-    set book({title, author, year}) {
-        if (typeof title !== 'string') {
-            console.log(`Error, please enter text for 'title'`);
-            return;
-        } else if (typeof author !== 'string') {
-            console.log(`Error, please enter text for 'author`);
-            return;
-        } else if (typeof year !== 'number') {
-            console.log(`Error, please enter number`);
-            return;
-        }
+		for (let book of books) {
+			if (Number(book.year) < Number(oldest.year)) {
+				oldest = book;
+			}
+		}
 
-        this.title = title;
-        this.author = author;
-        this.year = year;
-    }
+		return oldest.title;
+	}
 
-    printInfo() {
-        console.log(`Book: ${this.title}, author: ${this.author}, year of publication: ${this.year}`)
-    }
+	get book() {
+		return {
+			title: this.title,
+			author: this.author,
+			year: this.year,
+		};
+	}
+
+	set book({ title, author, year }) {
+		if (typeof title !== 'string') {
+			console.log(`Error, please enter text for 'title'`);
+			return;
+		} else if (typeof author !== 'string') {
+			console.log(`Error, please enter text for 'author`);
+			return;
+		} else if (typeof year !== 'number') {
+			console.log(`Error, please enter number`);
+			return;
+		}
+
+		this.title = title;
+		this.author = author;
+		this.year = year;
+	}
+
+	printInfo() {
+		console.log(`Book: ${this.title}, author: ${this.author}, year of publication: ${this.year}`);
+	}
 }
 ///
 // const book1 = new Book('Lovecraft', 'The call of Cthulhu' ,1928);
@@ -73,6 +72,5 @@ export class Book {
 //     book3,
 //     book4
 // ]
-
 
 // console.log(`The oldest book is - ${Book.oldest(oldestBook)}`)  //returned the oldest book for task #4
